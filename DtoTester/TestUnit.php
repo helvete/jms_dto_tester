@@ -4,9 +4,12 @@ namespace DtoTester;
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializationContext;
+use JMS\Serializer\SerializerBuilder;
 
 class TestUnit
 {
+    const TYPE_JSON = 'json';
+
     protected $jsonData;
     protected $dtoClass;
     protected $jms;
@@ -27,7 +30,7 @@ class TestUnit
             throw new \Exception('Unknown DTO class provided');
         }
         $this->dtoClass = $dtoClassName;
-        $this->jms = \JMS\Serializer\SerializerBuilder::create()->build();
+        $this->jms = SerializerBuilder::create()->build();
     }
 
 
@@ -44,12 +47,12 @@ class TestUnit
         $objectRef = $this->jms->deserialize(
             $this->jsonData,
             $this->dtoClass,
-            'json'
+            self::TYPE_JSON
         );
 
         $jsonData = $this->jms->serialize(
             $objectRef,
-            'json',
+            self::TYPE_JSON,
             SerializationContext::create()->setSerializeNull(true)
         );
 
@@ -79,7 +82,7 @@ class TestUnit
     protected function unifyString($json)
     {
         $multiDimArr = json_decode($json, true);
-        self::rksort($multiDimArr);
+        static::rksort($multiDimArr);
 
         return json_encode($multiDimArr);
     }
