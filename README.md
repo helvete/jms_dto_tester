@@ -24,6 +24,6 @@ Usage:
 ```
 
 TODOs:
-1. allow windows-friendly mode, that supports second parameter that specifices a filename
-1. change default behaviour of dumping formatted JSON string into a switchable option
-1. preformat output JSON files to make the diffing even easier
+1. allow windows-friendly mode, that supports second parameter that specifies a filename (instead of reading STDIN)
+1. change the default behaviour of dumping formatted JSON string into a switchable option
+1. preformat(Prettyprint) output JSON files to make the diffing even easier
