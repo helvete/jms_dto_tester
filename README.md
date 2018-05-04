@@ -10,12 +10,15 @@ Test your DTOs before publishing
 
 Usage:
 
-1. Copy your DTO class to a Request or Response dir (or another one - based on the namespace used)
-1. Run
+1. Copy your DTO class to a `Request` or `Response` dir (or to another one - based on the namespace used)
+1. Then run
+
+* JSON file mode:
 ```
 ./test_dto.php 'Response\NameSpace\ClassName' < /absolute/file/path.json
 ```
-1. Or get the json directly from some API using 3rd party lib, that returns a valid JSON and pipe it through (the example uses [request](https://github.com/helvete/request) API client library)
+
+* Or get the json directly from some API using 3rd party lib, that returns a valid JSON and pipe it through (the example uses [request](https://github.com/helvete/request) API client library)
 ```
 /path/to/request/src/rq -nx /path/to/request/src/t-esb.api_request |./test_dto.php 'Response\NameSpace\ClassName'
 ```
