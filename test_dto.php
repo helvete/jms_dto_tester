@@ -20,8 +20,8 @@ $testInstance = new \DtoTester\TestUnit($dtoClassName, $jsonString);
 $testData = $testInstance->test(true);
 
 print_r(
-	json_encode(
-		json_decode($testData, true),
-		JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES
-	)
+    json_encode(
+        json_decode($testData, true),
+        JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES
+    )
 );

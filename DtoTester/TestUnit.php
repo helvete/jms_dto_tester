@@ -7,9 +7,9 @@ use JMS\Serializer\SerializationContext;
 
 class TestUnit
 {
-	protected $jsonData;
-	protected $dtoClass;
-	protected $jms;
+    protected $jsonData;
+    protected $dtoClass;
+    protected $jms;
 
     /**
      * Class construct
@@ -22,7 +22,7 @@ class TestUnit
         if (is_null(json_decode($jsonString))) {
             throw new \Exception('Invalid JSON string provided');
         }
-    	$this->jsonData = $jsonString;
+        $this->jsonData = $jsonString;
         if (!class_exists($dtoClassName)) {
             throw new \Exception('Unknown DTO class provided');
         }
