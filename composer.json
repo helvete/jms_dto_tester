@@ -1,0 +1,11 @@
+{
+    "name": "helvete/jms_dto_tester",
+    "type": "library",
+    "description": "Test your DTOs before publishing",
+    "homepage": "https://github.com/helvete/jms_dto_tester",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "jms/serializer": "^1.11"
+    }
+}
