@@ -25,3 +25,4 @@ print_r(
         JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES
     )
 );
+echo PHP_EOL;
