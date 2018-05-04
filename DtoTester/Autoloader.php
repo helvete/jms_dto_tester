@@ -4,6 +4,11 @@ namespace DtoTester;
 
 class Autoloader
 {
+    /**
+     * Autoload DTO classes namespaced based on their path (PSR mode)
+     *
+     * @return bool
+     */
     public static function register()
     {
         spl_autoload_register(function ($class) {

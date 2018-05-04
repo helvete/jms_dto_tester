@@ -36,7 +36,7 @@ class TestUnit
      *  json payloads
      *
      * @param  bool $returnPayload
-     * @return string
+     * @return string|bool
      */
     public function test($returnPayload = false)
     {
