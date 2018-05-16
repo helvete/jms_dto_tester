@@ -5,7 +5,7 @@ Test your DTOs before publishing
 * deserialize it according to a JMS DTO provided
 * then serialize it again
 * finally compare the initial and the resulting string, while both are being recursively sorted the same way
-* write two files (`Response_NameSpace_ClassName<epoch-timestamp>.out_a` and `Response_NameSpace_ClassName<epoch-timestamp>.out_b`) for easy diffing in case of mismatch
+* write two files (`Response_NameSpace_ClassName<epoch-timestamp>.out_a` and `Response_NameSpace_ClassName<epoch-timestamp>.out_b`) for easy diffing _in case of mismatch_, now prettyprinted for easier diffing
 * dumps formatted resulting JSON by default
 
 Usage:
@@ -26,4 +26,4 @@ Usage:
 TODOs:
 1. allow windows-friendly mode, that supports second parameter that specifies a filename (instead of reading STDIN)
 1. change the default behaviour of dumping formatted JSON string into a switchable option
-1. preformat(Prettyprint) output JSON files to make the diffing even easier
+1. add switchable option to allow/disallow null values in DTO

@@ -61,7 +61,7 @@ class TestUnit
         if (!$match) {
             $fileName = preg_replace('~\\\~', '_', $this->dtoClass) . time();
             foreach (['out_a' => $testA, 'out_b' => $testB] as $ext => $str) {
-                file_put_contents("{$fileName}.{$ext}", $str);
+                file_put_contents("{$fileName}.{$ext}", self::prettyPrint($str));
             }
         }
 
@@ -103,5 +103,25 @@ class TestUnit
             }
         }
         ksort($sortMePlease);
+    }
+
+
+    /**
+     * Pretty print strings for easier diffing
+     *
+     * @param  string   $jsonString
+     * @return string
+     */
+    static public function prettyPrint($jsonString)
+    {
+        ob_start();
+        print_r(
+            json_encode(
+                json_decode($jsonString, true),
+                JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES
+            )
+        );
+
+        return ob_get_clean();
     }
 }

@@ -19,10 +19,6 @@ $testInstance = new \DtoTester\TestUnit($dtoClassName, $jsonString);
 // return the response for evaluation purposes
 $testData = $testInstance->test(true);
 
-print_r(
-    json_encode(
-        json_decode($testData, true),
-        JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES
-    )
-);
+echo $testInstance::prettyPrint($testData);
+
 echo PHP_EOL;
