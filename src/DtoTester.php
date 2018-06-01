@@ -1,12 +1,12 @@
 <?php
 
-namespace DtoTester;
+namespace helvete\Tools;
 
 use JMS\Serializer\Serializer;
 use JMS\Serializer\SerializationContext;
 use JMS\Serializer\SerializerBuilder;
 
-class TestUnit
+class DtoTester
 {
     const TYPE_JSON = 'json';
 

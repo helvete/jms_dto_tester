@@ -2,8 +2,8 @@
 <?php
 
 require('./vendor/autoload.php');
-require('./DtoTester/Autoloader.php');
-\DtoTester\Autoloader::register();
+require('./src/Psr2Autoloader.php');
+helvete\Tools\Psr2Autoloader::register();
 Doctrine\Common\Annotations\AnnotationRegistry::registerLoader('class_exists');
 
 if (count($argv) < 2) {
@@ -14,7 +14,7 @@ if (count($argv) < 2) {
 $dtoClassName = $argv[1];
 $jsonString = file_get_contents("php://stdin");
 
-$testInstance = new \DtoTester\TestUnit($dtoClassName, $jsonString);
+$testInstance = new helvete\Tools\DtoTester($dtoClassName, $jsonString);
 
 // return the response for evaluation purposes
 $testData = $testInstance->test(true);

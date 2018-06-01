@@ -1,8 +1,8 @@
 <?php
 
-namespace DtoTester;
+namespace helvete\Tools;
 
-class Autoloader
+class Psr2Autoloader
 {
     /**
      * Autoload DTO classes namespaced based on their path (PSR mode)
