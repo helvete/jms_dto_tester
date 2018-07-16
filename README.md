@@ -24,6 +24,5 @@ Usage:
 ```
 
 TODOs:
-1. allow windows-friendly mode, that supports second parameter that specifies a filename (instead of reading STDIN)
 1. change the default behaviour of dumping formatted JSON string into a switchable option
 1. add switchable option to allow/disallow null values in DTO
